@@ -15,7 +15,7 @@ class Markdown extends Component {
   render() {
     const items = this.icons.map(a => `<img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/${a}/${a}-original.svg" width="50"/>`)
     const br = "<br/>"
-    const sub = "<sub>Generated with GitHub icons tool.</sub>"
+    const sub = "<sub>Generated with [github-profile-icons](https://github.com/renevds/github-profile-icons).</sub>"
     return (
       <div>
         <div>
