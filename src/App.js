@@ -1,17 +1,22 @@
 import {
-  BrowserRouter as Router,
   Switch,
-  Route,
+  Route, HashRouter,
 } from "react-router-dom";
-import Card from "./components/Card";
+import Selector from "./components/Selector";
+import Widget from "./components/Widget";
 
 function App() {
   return (
-    <Router>
+    <HashRouter>
       <Switch>
-        <Route path="/:id" children={<Card/>}/>
+        <Route path="/widget/:logos">
+          <Widget/>
+        </Route>
+        <Route path="/">
+          <Selector/>
+        </Route>
       </Switch>
-    </Router>
+    </HashRouter>
   );
 }
 
