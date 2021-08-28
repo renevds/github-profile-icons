@@ -1,19 +1,19 @@
 import React, {Component} from "react";
 import {withRouter} from "react-router-dom";
-import LogoImg from "./LogoImg";
+import IconImg from "./IconImg";
 
-class Widget extends Component {
+class Markdown extends Component {
 
   constructor(props) {
     super(props);
-    this.logos = this.props.match.params.logos.split(';')
+    this.icons = this.props.match.params.icons.split(';')
   }
 
   componentDidMount() {
   }
 
   render() {
-    const items = this.logos.map(a => `<img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/${a}/${a}-original.svg" width="50"/>`)
+    const items = this.icons.map(a => `<img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/${a}/${a}-original.svg" width="50"/>`)
     const br = "<br/>"
     const sub = "<sub>Generated with GitHub icons tool.</sub>"
     return (
@@ -29,4 +29,4 @@ class Widget extends Component {
   }
 }
 
-export default withRouter(Widget);
+export default withRouter(Markdown);

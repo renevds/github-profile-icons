@@ -1,7 +1,7 @@
 import React, {Component} from "react";
 import {withRouter} from "react-router-dom";
 
-class WidgetLink extends Component {
+class MarkdownLink extends Component {
 
   constructor(props) {
     super(props);
@@ -23,10 +23,10 @@ class WidgetLink extends Component {
   render() {
     return (
       <div className="text-center mb-3 mt-1">
-        <button onClick={this.handleClick} className="btn btn-info" disabled={this.state.srcEmpty()}>{this.state.srcEmpty() ? 'Chose some logo\'s, then click here.' : 'Show markdown'}</button>
+        <button onClick={this.handleClick} className="btn btn-info" disabled={this.state.srcEmpty()}>{this.state.srcEmpty() ? 'Chose some icons, then click here.' : 'Show markdown'}</button>
       </div>
     )
   }
 }
 
-export default withRouter(WidgetLink);
+export default withRouter(MarkdownLink);

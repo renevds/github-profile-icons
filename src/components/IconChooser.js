@@ -1,9 +1,9 @@
 import React, {Component} from "react";
 import {withRouter} from "react-router-dom";
-import LogoImg from "./LogoImg";
+import IconImg from "./IconImg";
 import PropTypes from 'prop-types';
 
-class LogoChooser extends Component {
+class IconChooser extends Component {
 
   static propTypes = {
     setIcon: PropTypes.func
@@ -29,7 +29,7 @@ class LogoChooser extends Component {
 
     return (
       <div className="card col-sm-2 col-6">
-        <LogoImg className="card-img-top" icon={this.state.icon}/>
+        <IconImg className="card-img-top" icon={this.state.icon}/>
         <div className="card-body">
           <h5 className="card-title">{this.state.icon.name}</h5>
           <button onClick={this.handleClick} className={this.state.selected ? 'btn btn-danger' : 'btn btn-primary'}>{this.state.selected ? 'X' : 'Add'}</button>
@@ -39,4 +39,4 @@ class LogoChooser extends Component {
   }
 }
 
-export default withRouter(LogoChooser);
+export default withRouter(IconChooser);

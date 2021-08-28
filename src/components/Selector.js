@@ -1,8 +1,8 @@
 import React, {Component} from "react";
 import axios from "axios";
 import {withRouter} from "react-router-dom";
-import LogoChooser from "./LogoChooser";
-import WidgetLink from "./WidgetLink";
+import IconChooser from "./IconChooser";
+import MarkdownLink from "./MarkdownLink";
 
 const divStyle = {
   backgroundColor: '#0d1117'
@@ -53,8 +53,8 @@ class Selector extends Component {
 
 
   render() {
-    const widgetLink = <WidgetLink getLink={this.getLink}/>;
-    const items = this.state.icons.map(icon => <LogoChooser key={icon.name} icon={icon} setIcon={this.setIcon}/>)
+    const widgetLink = <MarkdownLink getLink={this.getLink}/>;
+    const items = this.state.icons.map(icon => <IconChooser key={icon.name} icon={icon} setIcon={this.setIcon}/>)
 
     return (
       <React.Fragment>

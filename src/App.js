@@ -3,14 +3,14 @@ import {
   Route, HashRouter,
 } from "react-router-dom";
 import Selector from "./components/Selector";
-import Widget from "./components/Widget";
+import Markdown from "./components/Markdown";
 
 function App() {
   return (
     <HashRouter>
       <Switch>
-        <Route path="/widget/:logos">
-          <Widget/>
+        <Route path="/widget/:icons">
+          <Markdown/>
         </Route>
         <Route path="/">
           <Selector/>
